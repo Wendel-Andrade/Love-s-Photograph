@@ -1,0 +1,271 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+header .logo
+{
+    max-width: 120px;
+
+}
+header .toggle 
+{   
+    position: absolute;
+    right: 350px;
+    max-width: 40px;
+    cursor: pointer;
+}
+header .toggle  img
+{
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    right: 20px;
+    display: inline;
+    max-width: 28px;
+}
+header .logo img
+{
+    max-width: 100%;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url(slide.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search 
+{
+    position: absolute;
+    width: 300px;
+    top: 0px;
+    right: 0px;
+    left: -10px;
+}
+ .banner .content
+ {  
+    margin-left: -5%;
+    width: 500px;
+    background-color: #4b4b4b8f;
+    border-radius: 10px;
+ }
+ .banner .content h2
+{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+.banner .content h2 span
+{
+    font-weight: 800;
+}
+.banner .content p
+{
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #ffffff;
+    margin: 15px 0 35px;
+}
+span
+{
+    animation: aks  5s infinite;
+    font-style: italic;
+}
+.sci
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a 
+{
+    text-decoration: none;
+
+}
+.sci li a img
+{
+   filter: invert(1);
+   transform: scale(0.6);
+}
+.slide
+{
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 250px / 2);
+    width: 250px;
+    height: 150px;
+    background: url(background.png);
+    background-size: cover;
+    cursor: pointer;
+    animation: animate 30s linear infinite;
+    transition: 2s;
+    filter: opacity(0.2);
+}
+.slide:hover
+{
+    transform: scale(1.5);
+    filter: opacity(1);
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: bottom;
+    }
+    25%
+    {
+        background-position: top;
+    }
+    50%
+    {
+        background-position: center;
+    }
+    75%
+    {
+        background-position: right;
+    }
+    100%
+    {
+        background-position: left;
+    }
+}
+@keyframes aks
+{
+    0%
+    {
+        color: #ffffff;
+    }
+    100%
+    {
+       color: #f13939da;
+    }
+}
+form,  input, button 
+{
+    display: block;
+}
+input
+{
+    width: 100%;
+    display: flex;
+    margin-bottom: 12px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #5a5a5a;
+    outline: none;
+}
+input[placeholder] 
+{
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.8;
+    background-color: #ffffff86;
+}
+input:focus 
+{
+    border-color:#f13939da;;
+    caret-color: #ffffff;
+}
+.entrar
+{
+    font-size: 20px;
+    background: #ffffff6c;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.8s;
+}
+.entrar:hover
+{
+    color: #f13939da;
+}
+
+/* MEDIA */
+
+@media (max-width: 991px)
+{
+    header
+    {
+        padding: 20px 50px;
+    }
+    header .logo
+    {
+        position: absolute;
+        max-width: 80px;
+        left: 0;
+        top: 20px;
+    }
+    header .toggle
+    {
+        max-width: 40px;
+        justify-content: center;
+    }
+    .banner
+    {
+        padding: 100px 50px;
+    }
+    .banner .content h2 
+    {
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em;
+    }
+    .banner .content p
+    {
+        font-size: 1em;
+    }
+    .slide
+    {
+       position: absolute;
+       flex-wrap: nowrap;
+    }
+    .sci
+    {
+        position: absolute;
+        top: initial;
+        right: initial;
+        margin-top: 40px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+}
